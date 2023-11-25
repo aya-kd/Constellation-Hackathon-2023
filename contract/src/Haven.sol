@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
+import {PriceConverter} from "./PriceConverter.sol";
 contract Haven {
 
-    
+    using PriceConverter for uint;
+
     uint public s_propertyId;
 
     //------------------------------------Mappings & enums------------------------------------//
@@ -126,19 +128,20 @@ contract Haven {
     function donate(uint ID) public payable propertyIsRequested(ID){
         Property storage property = s_properties[ID];
 
-        // Chainlink API call to get current USD/ETH price
+        // Using Chainlink Price Feed to get current USD/ETH price
+        uint price = property.price.usdToEth();
 
 
-        // Ensure the received amount matches the property's price
-        require(msg.value == property.price, "Incorrect donation amount");
+        // Ensure the sent amount isn't less than the property's price
+        require(msg.value >= price, "Incorrect donation amount");
 
         //send donation to contract
-        (bool success,) = payable(address(this)).call{value: msg.value}("");
+        (bool success,) = payable(address(this)).call{value: price}("");
         require(success, "Donation failed.");
 
         //pay the owner
-        (bool callSuccessful, ) = payable(property.owner).call{value: address(this).balance}("");
-        require(callSuccessful, "Call failed");
+        (bool paymentSuccessful, ) = payable(property.owner).call{value: price}("");
+        require(paymentSuccessful, "Paying owner failed");
 
         //set property status to occupied
         property.status = PropertyStatus.Occupied;
@@ -175,6 +178,13 @@ contract Haven {
 //only owners can accept or reject requests  --- *done*
 //price = 0 --- *done*
 //events --- *done*
+
+
+
 //chainlink --- **not done**
 //tests --- **not done**
+//what if owner doesn't want to rent his property anymore? --- **not done**
+
+
+
 //accept/reject --- *cancelled*
