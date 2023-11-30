@@ -1,0 +1,97 @@
+.haven__brand {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+   }
+   
+   .haven__brand-SupportRefugees-text{
+    justify-content: center;
+   }
+   .haven__brand-SupportRefugees-text-header{
+    left: 170px;
+    top: 1100px;
+    position: absolute;
+    margin-right: 10px;
+    color: var(--White, #D9D9D9);
+    text-align: right;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+   }
+   .haven__brand-SupportRefugees-text-body{
+    width: 400px;
+    position: absolute;
+    left: 100px;
+    top: 1150px;
+    color: var(--White, #D9D9D9);
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+   }
+   .haven__brand-Transparency-text{
+    justify-content: center;
+   }
+   .haven__brand-Transparency-text-header{
+    left: 870px;
+    top: 1300px;
+    position: absolute;
+    margin-right: 10px;
+    color: var(--White, #D9D9D9);
+    text-align: right;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+   }
+   .haven__brand-Transparency-text-body{
+    width: 400px;
+    position: absolute;
+    left: 835px;
+    top: 1350px;
+    color: var(--White, #D9D9D9);
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+   }
+
+   .haven__brand-Payments-text{
+    justify-content: center;
+   }
+   .haven__brand-Payments-text-header{
+    left: 100px;
+    top: 1500px;
+    position: absolute;
+    margin-right: 10px;
+    color: var(--White, #D9D9D9);
+    text-align: right;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+   }
+   .haven__brand-Payments-text-body{
+    width: 430px;
+    position: absolute;
+    left: 80px;
+    top: 1550px;
+    color: var(--White, #D9D9D9);
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+   }
+   
