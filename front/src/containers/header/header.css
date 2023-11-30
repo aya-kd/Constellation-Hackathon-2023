@@ -1,0 +1,85 @@
+.haven__header-all {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.haven__header-content{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 5rem;
+}
+.haven__header-content h1 {
+    position: absolute;
+    left: 286px;
+    top: 585px;
+    color: var(--White, #D9D9D9);
+    text-align: center;
+    font-family: Inter;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    color: var(--Yellow, #EBA654);
+    font-family: Inter;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.haven__header-content p {
+    width: 1064px;
+    height: 78px;
+    position: absolute;
+    left: 193px;
+    top: 695px;
+    color: var(--White, #D9D9D9);
+    text-align: center;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.haven__header-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 109px;
+    height: 45px;
+    border-radius: 5px;
+    background: var(--Yellow, #EBA654);
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    outline: none;
+    padding: 0 1rem;
+    border: none;
+    margin: 4px 2px;
+    justify-content: center;
+    left: 700px;
+    top: 800px;
+    
+}
+.haven__header-image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.haven__header-image-content img {
+    width: 100%;
+    height: auto;
+    
+
+}
