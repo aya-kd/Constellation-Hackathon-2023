@@ -12,7 +12,7 @@
 **Haven**
 
 # 2. Description
-
+It is a decentralized application (Dapp) designed to assist refugees in securing rental accommodations in the countries where they have sought refuge. Users have the option to contribute funds to support refugees in paying their rent, while property owners can list their properties for rent.
 
 # 3. Technologies
 Tech stack used in this project:  
@@ -34,7 +34,24 @@ Tech stack used in this project:
 - Figma  
 
 
-# 4. Features
+# 4. Features  
+1.User Authentication  
+- User authentication for refugees(confirming their refugee status) and house owners(verification of property ownership).
+  
+2.House Search & Listing:  
+- A search feature for refugees to find available houses for rent.  
+- Enabling house owners to list their properties with details.
+  
+3.Payment Gateway Integration:  
+- A secure payment gateway is integrated for donors to make rent payments on behalf of refugees using crypto wallets.
+  
+4.Smart Contract Integration:  
+- smart contracts incorporation for secure and transparent rent transactions.
+
+5. Price Conversion and Lease Control using Chinlink technologies:  
+- **Data Feeds:** converting rental prices from dollars to Ethereum (ETH)  
+- **Automation:** ensuring timely termination of a refugee's rental rights as per the owner's specified duration.
+
 
 
 # 5. Authors
