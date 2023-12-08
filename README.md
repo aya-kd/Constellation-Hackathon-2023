@@ -45,5 +45,6 @@ Tech stack used in this project:
 + [Nour Imane BENHAFESSA](https://github.com/nourImen20)  
 
 # 6. License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # 7. Project Status
