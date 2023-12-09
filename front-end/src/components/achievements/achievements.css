@@ -1,0 +1,121 @@
+.haven__achievements{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 50px ;
+    background: var(--Lighter-Blue, #1A2130);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 50px;
+}
+.haven__achievements-title{
+    color: var(--White, #D9D9D9);
+    text-align: center;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.haven__achievements-images-all{
+    text-align: center;
+}
+.haven__achievements-images-content1 p{
+    position: absolute;
+    color: var(--White, #D9D9D9);
+    text-align: center;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.haven__achievements-images-content1-text1{
+    top: 2110px;
+    left: 285px;
+}
+.haven__achievements-images-content1-text2{
+    top: 2110px;
+    left: 615px;
+}
+.haven__achievements-images-content1-text3{
+    top: 2110px;
+    left: 965px;
+}
+.haven__achievements-images-content1-title{
+    display: flex;  
+    flex-direction: row;
+    color: var(--White, #D9D9D9);
+    text-align: left;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.haven__achievements-images-content1-title-title1{
+    margin-left: 120px;
+    bottom: 950px;
+}
+.haven__achievements-images-content1-title-title2{
+    margin-left: 60px;
+    bottom: 950px;
+}
+.haven__achievements-images-content1-title-title3{
+    margin-left: 70px;
+    bottom: 950px;
+}
+@media screen and (max-width: 1050px){
+    .haven__achievements-images-content1-text1{
+        left: 115px;
+    }
+    .haven__achievements-images-content1-text2{
+        left: 450px;
+    }
+    .haven__achievements-images-content1-text3{
+        left: 795px;
+    }
+    .haven__achievements-images-content1-title-title1{
+        margin-left: 50px;
+    }
+    .haven__achievements-images-content1-title-title2{
+        margin-left: 100px;
+    }
+    .haven__achievements-images-content1-title-title3{
+        margin-left: 120px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .haven__achievements{
+        background: var(--Lighter-Blue, #1A2130);
+        width: 1300px;
+    }
+   .haven__achievements-images-content1-text1{
+    margin-left: 150px;
+   }
+   .haven__achievements-images-content1-text2{
+    margin-left: 140px;
+   }
+   .haven__achievements-images-content1-text3{
+    margin-left: 140px;
+   }
+   .haven__achievements-images-content1-title-title1{
+    margin-left: 50px;
+   }
+   .haven__achievements-images-content1-title-title2{
+    margin-left: 100px;
+   }
+   .haven__achievements-images-content1-title-title3{
+    margin-left: 70px;
+   }
+}
+@media screen and (max-width: 490px) {
+    .haven__achievements-images-content1-text1{
+        margin-top: 30px;
+    }
+    .haven__achievements-images-content1-text2{
+        margin-top: 30px;
+    }
+    .haven__achievements-images-content1-text3{
+        margin-top: 30px;
+    }
+}

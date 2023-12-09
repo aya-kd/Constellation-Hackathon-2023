@@ -1,0 +1,49 @@
+
+.haven__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 7rem;
+    background: var(--Dark-Blue, #091020);
+    color: #fff;
+   }
+   
+   .havenn__footer-start,
+   .haven__footer-end {
+    display: flex;
+    align-items: center;
+   }
+   
+   .havenn__footer-start p {
+    margin-right: 1rem;
+   }
+   
+   .havenn__footer-start p:last-child {
+    margin-right: 0;
+   }
+   
+   .haven__footer-end p {
+    margin-right: 2.5rem;
+   }
+   
+   .haven__footer-end p:last-child {
+    margin-right: 0;
+   }
+   
+   .haven__footer-end a {
+    color: var(--White, #D9D9D9);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    text-decoration: none;
+   }
+   
+   .haven__footer-end a:hover {
+    text-decoration: underline;
+   }
+   .havenn__footer-start a{
+    color: var(--Blue, #d9d9d9);
+   }
+   

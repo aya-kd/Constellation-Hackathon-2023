@@ -1,0 +1,86 @@
+.haven__informations{
+    background: var(--Lighter-Blue, #1A2130);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin-top: 50px;
+    height: 350px;
+}
+.haven__informations h4{
+    
+    color: var(--Yellow, #EBA654);
+    font-family: Gayathri;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-top: 80px;
+
+}
+.haven__informations p{
+    color: var(--White, #D9D9D9);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 165%; 
+    align-items: center;
+    text-align: left;
+    justify-content: left;
+}
+.haven__informations-help-upper{
+    text-transform: uppercase;
+}
+.haven__informations-about-p{
+    margin-top: 30px;
+}
+.haven__informations-links-p{
+    margin-top: 30px;
+}
+.haven__informations-help-p{
+    margin-top: 30px;
+}
+.haven__informations-contact-p{
+    margin-top: 30px;
+}
+.haven__informations-about{
+    margin-left: 120px;
+}
+.haven__informations-links{
+    margin-left: 100px;
+    margin-right: 0%;
+    
+}
+.haven__informations-links-p{
+    cursor: pointer;
+}
+.haven__informations-help{
+    margin-left: 50px;
+    
+}
+.haven__informations-help-p{
+    cursor: pointer;
+}
+.haven__informations-contact{
+    margin-right: 30px;
+}
+.haven__informations-contact h5{
+    color: var(--White, #D9D9D9);
+
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 165%; 
+    
+}
+.haven__informations-about-p-click{
+    cursor: pointer;
+}
+@media screen and (max-width: 800px){
+    .haven__informations{
+        width: 1800px;
+    }
+}
