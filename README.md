@@ -1,5 +1,4 @@
-**Constalation Hackathon 2023**
-This project serves as our entry for Chainlink's Constellation Hackathon 2023 
+This project serves as our entry for Chainlink's **Constellation Hackathon 2023**.   
 
 # Table of Contents
 [1. Project Title](https://github.com/aya-kd/Constellation-Hackathon-2023#1-project-title)  
