@@ -1,0 +1,139 @@
+.haven__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.haven__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+}
+.haven__navbar-links_logo {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+.haven__navbar-links_logo img {
+    width: 68px;
+    height: 68px;
+}
+.haven__navbar-links_container{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.haven__navbar-links_container-sign{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end ;
+    align-items: center;
+    right: 3%;
+    cursor: pointer;
+}
+.haven__navbar-links_container p,
+.haven__navbar-menu_container p{
+    color: var(--White, #D9D9D9);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 1 2rem;
+}
+.haven__navbar-links_container a,
+.haven__navbar-menu_container a{
+    color: var(--White, #D9D9D9);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 1 2rem;
+}
+.haven__navbar-links_container-sign button,
+.haven__navbar-menu_container button{
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background: var(--Yellow, #EBA654);
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.haven__navbar-menu {
+    margin-left: 50rem;
+    display: none;
+    position: relative;
+}
+.haven__navbar-menu svg {
+    cursor: pointer;
+}
+.haven__navbar-menu_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: end;
+    background: var(--color-footer);
+    padding:1rem ;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    margin-top: 1.5rem;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0, 0,0.2);
+}
+.haven__navbar-menu_container p {
+    margin: 1rem ;
+}
+.haven__navbar-menu_container-sign {
+    display: none;
+}
+@media screen and (max-width: 1050px) {
+    .haven__navbar-menu_container-sign {
+        display: none;
+    }
+    .haven__navbar-menu {
+        display: none;
+    }
+} 
+@media screen and (max-width: 700px) {
+    .haven__navbar {
+        padding: 2rem 4rem;
+    }
+}
+@media screen and (max-width: 550px) {
+    .haven__navbar {
+        padding: 2rem;
+    }
+    .haven__navbar-menu {
+        display: flex;
+    }
+    .haven__navbar-menu_container-sign {
+        display: none;
+    }
+
+    .haven__navbar-menu_container {
+        top: 20px;
+    }
+
+    .haven__navbar-menu_container-sign {
+        display: block;
+    }
+}
+
+
+
