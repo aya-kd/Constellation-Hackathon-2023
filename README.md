@@ -1,3 +1,6 @@
+**Constalation Hackathon 2023**
+This project serves as our entry for Chainlink's Constellation Hackathon 2023 
+
 # Table of Contents
 [1. Project Title](https://github.com/aya-kd/Constellation-Hackathon-2023#1-project-title)  
 [2. Description](https://github.com/aya-kd/Constellation-Hackathon-2023#2-description)  
@@ -12,7 +15,7 @@
 **Haven**
 
 # 2. Description
-It is a decentralized application (Dapp) designed to assist refugees in securing rental accommodations in the countries where they have sought refuge. Users have the option to contribute funds to support refugees in paying their rent, while property owners can list their properties for rent.
+It is a decentralized application (Dapp) designed to assist refugees in securing rental accommodations in the countries where they have sought refuge. Users have the option to donate funds to support refugees in paying their rent, while property owners can list their properties for rent.
 
 # 3. Technologies
 Tech stack used in this project:  
