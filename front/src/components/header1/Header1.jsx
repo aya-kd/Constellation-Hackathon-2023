@@ -1,9 +1,9 @@
 import React from 'react';
-import './header.css'
+import './header1.css'
 import refugee from "../../assets/refugee.png";
 
 
- const Header = () => {
+ const Header1 = () => {
   const handleDonateClick = () => {
     console.log('Button clicked! ');
   }
@@ -21,4 +21,4 @@ import refugee from "../../assets/refugee.png";
   );
 };
  
-export default Header;
+export default Header1;

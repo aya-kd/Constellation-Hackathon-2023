@@ -1,0 +1,114 @@
+
+.footer{
+    padding-left: 200px;
+    
+}
+.sb__footer{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-footer);
+}
+.sb__footer-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.sb__footer-links-div{
+    width: 220px;
+    margin: 0rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color:var(--color-text);
+}
+a{
+    text-decoration: none;
+}
+
+.follow{
+    display: flex;
+    flex-direction: row;
+}
+.follow img {
+    margin-right: .4rem;
+    margin-left: 5px;
+    margin-top: 9px;
+    width: 20px;
+    height: 20px;
+    
+}
+.sb__footer-links-div h4{
+    font-family:  var(--font-family);;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    color: var(--color-subtext);
+}
+.sb__footer-links-div p{
+    font-family:  var(--font-family);;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 165%; /* 26.4px */
+    text-transform: lowercase;
+    cursor: pointer;
+    color: var(--color-text);
+    margin: 0.5rem 0;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+.contact img{
+    width: 20px;
+    height: 20px;
+}
+.sb__footer-below{
+    background-color: var(--color-bg);
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    width: 100%;
+    align-items: center;
+    
+    height: 70px;
+}
+
+.sb__footer-below-links{
+    gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    
+}
+.sb__footer-below-links p{
+    color: var(--color-text);
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    gap: 1rem;
+}
+.sb__footer-copyright p{
+    margin-right: 14rem;
+        color: var(--color-text);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 15px;
+        text-transform: capitalize;
+    
+}
+
+.faq{
+    text-transform:uppercase;
+}

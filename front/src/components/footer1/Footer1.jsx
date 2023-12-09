@@ -1,7 +1,7 @@
 import React from 'react';
-import './footer.css';
+import './footer1.css';
 
-const Footer = () => {
+const Footer1 = () => {
   return (
     <div className="haven__footer">
         <div className="havenn__footer-start">
@@ -20,4 +20,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer1

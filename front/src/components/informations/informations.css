@@ -1,5 +1,5 @@
 .haven__informations{
-    background: var(--Dark-Blue, #091020);
+    background: var(--Lighter-Blue, #1A2130);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;

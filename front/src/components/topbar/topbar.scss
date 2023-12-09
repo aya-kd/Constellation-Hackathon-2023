@@ -1,0 +1,200 @@
+.topbar__container {
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    flex: 1;
+    background-color: var(--color-bg);
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 2.5rem 2.5rem;
+    border: 2px solid var(--color-blog);
+    
+}
+.topbar__container-left{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding-left: -2rem;
+}
+.haven__navbar-links_logo{
+    display: flex;
+    align-items: center;
+}
+.haven__navbar-links_logo img {
+    margin-right: 10px;
+    
+}
+.haven__navbar-links_name {
+    color: var(--color-text); 
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 25px;
+    font-weight: 600;
+    line-height: normal;
+    
+}
+  
+.topbar__container-right{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.haven__navbar-user {  
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+
+.haven__navbar-user p,  
+.haven__navbar-menu_container p {
+    color: var(--color-text); 
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.haven__navbar-menu_container-links-user a {
+    color: var(--color-subtext); 
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.haven__navbar-user button {
+  margin-right: 15px;
+  
+}
+.disconnect-button{
+    width: 130px;
+    height: 45px;
+    color:var(--color-text);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: var(--color-subtext);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.user-button {
+    border-radius: 50%;
+    width: 64px;
+    height: 62.17px;
+    flex-shrink: 0;
+    background-color: var(--color-subtext);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  .user-button svg {
+    color: #fff;
+  }
+.haven__navbar-menu {
+    margin-left: 1rem;
+    display: none;
+    position: relative;
+    
+}
+.haven__navbar-menu svg {
+    cursor: pointer;
+}
+.haven__navbar-menu_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    background: var(--color-footer);
+    text-align: end;
+    padding: 2rem;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    margin-top: 1rem;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+}
+.haven__navbar-menu_container p{
+    margin: 1rem 0;
+    color: var(--color-subtext);
+    
+}
+.haven__navbar-menu_container-links-user{ 
+    display: none;
+}
+@media screen and (max-width: 1050px){
+    .haven__navbar-menu{
+        display: none;
+    }
+}
+@media screen and (max-width: 700px){
+    .haven__navbar{
+        padding: 2rem 4rem;
+    }
+    .haven__navbar-menu{
+        display: flex;
+    } 
+    .haven__navbar-user{ 
+        display: none;
+    }
+    .haven__navbar-menu_container{
+        top: 20px;
+    }
+    .haven__navbar-menu_container-links-user{ 
+        display: block;
+    }
+    .haven__navbar-links_logo{
+
+        .haven__navbar-links_name {
+            
+            font-size: 20px;
+            font-weight: 600;
+            line-height: normal;
+            
+        }
+
+        
+        img{
+            width: 45px;
+            height: 45px;
+            margin-left:-15px;
+        }
+    }
+    
+
+}
+@media screen and (max-width: 550px){
+    .haven__navbar{
+        padding: 2rem;
+    }
+    .haven__navbar-user{
+        display: none;
+    }
+    .haven__navbar-menu_container{
+        top: 20px;
+    }
+    .haven__navbar-menu_container-links-user{
+        display: block;
+    }
+}
+

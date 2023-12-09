@@ -1,22 +1,22 @@
-import React from 'react'
-import { Footer,  Informations, Connect, Header, Achievements } from './containers';
-import { Brand, Navbar } from './components';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Home from './pages/home/Home';
+import Lending from './pages/lending/Lending';
 
-const App = () => {
+
+
+function App() {
   return (
-    <div className="App">
-      <div className="gradient__bg">
-      <Navbar />
-      <Header />
-    </div>
-    <Brand />
-    <Achievements />
-    <Connect />
-    <Informations />
-    <Footer />
-    </div>
-  )
+    <>
+      <Router>
+          <Switch>
+            <Route exact path='/'  component={Lending} />
+            <Route path='/Home' component={Home} />
+          </Switch>
+      </Router>
+    
+    </>
+  );
 }
-
-export default App
+export default App;
