@@ -6,15 +6,14 @@ This project serves as our entry for Chainlink's **Constellation Hackathon 2023*
 [3. Technologies](https://github.com/aya-kd/Constellation-Hackathon-2023#3-technologies)  
 [4. Features](https://github.com/aya-kd/Constellation-Hackathon-2023#4-features)  
 [5. Authors](https://github.com/aya-kd/Constellation-Hackathon-2023#5-authors)  
-[6. License](https://github.com/aya-kd/Constellation-Hackathon-2023#6-license)  
-[7. Project Status](https://github.com/aya-kd/Constellation-Hackathon-2023#7-project-status)  
+[6. License](https://github.com/aya-kd/Constellation-Hackathon-2023#6-license)   
 
 # 1. Project Title  
 
 **Haven**
 
 # 2. Description
-It is a decentralized application (Dapp) designed to assist refugees in securing rental accommodations in the countries where they have sought refuge. Users have the option to donate funds to support refugees in paying their rent, while property owners can list their properties for rent.
+It is a decentralized application (Dapp) designed to assist refugees in securing rental expenses in the countries where they have sought refuge. Users have the option to donate funds to support refugees in paying their rent, while property owners can list their properties for rent.
 
 # 3. Technologies
 Tech stack used in this project:  
@@ -48,11 +47,11 @@ Tech stack used in this project:
 - A secure payment gateway is integrated for donors to make rent payments on behalf of refugees using crypto wallets.
   
 4.Smart Contract Integration:  
-- smart contracts incorporation for secure and transparent rent transactions.
+- smart contracts incorporation for secure and transparent rent transactions.  
 
-5. Price Conversion and Lease Control using Chinlink technologies:  
+5.Price Conversion and Lease Control using Chinlink technologies:  
 - **Data Feeds:** converting rental prices from dollars to Ethereum (ETH)  
-- **Automation:** ensuring timely termination of a refugee's rental rights as per the owner's specified duration.
+- **Automation:** ensuring timely termination of a refugee's rental rights as per the owner's specified duration.  
 
 
 
@@ -66,4 +65,3 @@ Tech stack used in this project:
 # 6. License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# 7. Project Status
