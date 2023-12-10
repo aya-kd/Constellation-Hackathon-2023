@@ -26,10 +26,7 @@ Tech stack used in this project:
 - Html 5 (Hypertext Markup Language 5)  
 - Css (Cascading Style Sheets)  
 - ReactJS  
-- Node js
-
-**Database**  
-- mongoDB  
+- Node js  
 
 **UI/UX design**  
 - Figma  
