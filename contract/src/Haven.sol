@@ -1,12 +1,18 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
+import {AutomationCompatible} from "../node_modules/@chainlink/contracts/src/v0.8/automation/AutomationCompatible.sol";
 import {PriceConverter} from "./PriceConverter.sol";
-contract Haven {
+
+
+contract Haven is AutomationCompatible{
 
     using PriceConverter for uint;
-
+    
     uint public s_propertyId;
+    uint public lastTimeStamp;
+    uint public constant MONTHS = 30 days;
+    uint public constant DAY = 1 days;
 
     //------------------------------------Mappings & enums------------------------------------//
     mapping(uint => Property) public s_properties;
@@ -29,13 +35,14 @@ contract Haven {
         uint price;
         uint months;
         PropertyStatus status;
+        uint startRentTime;
         address currentRefugee;
         address owner;  
     }
 
     //---------------------------------------Constructor---------------------------------------//
     constructor() {
-        
+        lastTimeStamp = block.timestamp;
     }
 
     //-----------------------------------------Events------------------------------------------//
@@ -64,7 +71,7 @@ contract Haven {
         _;
     }
 
-    modifier onlyOwner() {
+    modifier onlyPropertyOwner() {
         require(!s_accounts[msg.sender].isRefugee, "You are not an owner.");
         _;
     }
@@ -83,13 +90,18 @@ contract Haven {
 
     }
 
+    function getAccount(address _address) public view returns(Account memory) {
+        return s_accounts[_address];
+    }
 
-    function listProperty(uint _price, uint _months) public onlyOwner{
+
+    function listProperty(uint _price, uint _months) public onlyPropertyOwner{
         Property memory property = Property({
             id: s_propertyId,
             price: _price,
             months: _months,
             status: PropertyStatus.Available,
+            startRentTime: 0,
             currentRefugee: address(0),
             owner: msg.sender
         });
@@ -103,6 +115,10 @@ contract Haven {
         //event: PropertyListed
         emit PropertyListed(property);
         
+    }
+
+    function getProperty(uint _id) public view returns(Property memory) {
+        return s_properties[_id];
     }
 
     function request(uint ID) public propertyIsAvailable(ID) onlyRefugee {
@@ -125,7 +141,10 @@ contract Haven {
         
     }
 
+
+
     function donate(uint ID) public payable propertyIsRequested(ID){
+
         Property storage property = s_properties[ID];
 
         // Using Chainlink Price Feed to get current USD/ETH price
@@ -146,6 +165,9 @@ contract Haven {
         //set property status to occupied
         property.status = PropertyStatus.Occupied;
 
+        //start counting rent time
+        property.startRentTime = block.timestamp; 
+
         //event: DonationReceived
         emit DonationReceived(msg.sender, msg.value);
 
@@ -155,36 +177,53 @@ contract Haven {
         
     }
 
-
-    function endRentTime(uint ID) public{
-        // Chanlink Automation
-
+    function endRent(uint ID) public propertyIsRequested(ID) {
         Property storage property = s_properties[ID];
 
-        //turn refugee's address to 0
-        property.currentRefugee = address(0);
-
-        //change property's sratus to available
+        //change property status to available
         property.status = PropertyStatus.Available;
 
+        //set current refugee to 0
+        property.currentRefugee = address(0);
+
+        //set startRentTime to 0
+        property.startRentTime = 0;
+
         //event: RentTimeEnded
-        emit RentTimeEnded("Rent time ended.");
+        emit RentTimeEnded("Rent time is over.");
+
+        //event: PropertyStatusChanged
+        emit PropertyStatusChanged(property.status);
+    }
+
+    //----------------------------------------Chainlink-----------------------------------------//
+
+        function checkUpkeep(bytes calldata /* checkData */) external view override returns (bool upkeepNeeded, bytes memory /*performData*/) {
+        upkeepNeeded = block.timestamp - lastTimeStamp >= DAY;
+        
     }
 
     
+
+    function performUpkeep(bytes calldata /*performData*/ ) external override {
+        if ((block.timestamp - lastTimeStamp) > DAY) {
+            lastTimeStamp = block.timestamp;
+        }
+        for(uint i = 0; i < s_propertyId; i++) {
+            Property memory property = s_properties[i];
+            if(block.timestamp - property.startRentTime >= property.months * MONTHS && property.status == PropertyStatus.Occupied) {
+                endRent(property.id);
+            }
+        }
+    }
+
+
+    fallback() external payable {
+        
+    }
+
+    receive() external payable {
+        
+    }
+    
 }
-
-//only refugees can request rent --- *done*
-//only owners can accept or reject requests  --- *done*
-//price = 0 --- *done*
-//events --- *done*
-
-
-
-//chainlink --- **not done**
-//tests --- **not done**
-//what if owner doesn't want to rent his property anymore? --- **not done**
-
-
-
-//accept/reject --- *cancelled*

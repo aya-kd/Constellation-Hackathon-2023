@@ -1,12 +1,16 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
-import {Script, console2} from "forge-std/Script.sol";
+import {Script} from "forge-std/Script.sol";
+import {Haven} from "../src/Haven.sol";
 
-contract HavenScript is Script{
-    function setUp() public {}
+contract DeployHaven is Script {
 
-    function run() public {
-        vm.broadcast();
+    function run() external returns (Haven) {
+        vm.startBroadcast();
+        Haven haven = new Haven();
+        vm.stopBroadcast();
+
+        return haven;
     }
 }
 
