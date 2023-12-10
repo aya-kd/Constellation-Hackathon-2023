@@ -1,38 +1,30 @@
 .haven__navbar {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 1rem 2rem;
 }
-.haven__navbar-links {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; 
-}
-.haven__navbar-links_logo {
+.haven__navbar-logo {
     margin-right: 15px;
     display: flex;
     align-items: center;
 }
-.haven__navbar-links_logo img {
+.haven__navbar-logo img {
     width: 68px;
     height: 68px;
 }
-.haven__navbar-links_container{
-    justify-content: space-between;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+.haven__navbar-logo p{
+    color: var(--White, #D9D9D9);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 1 2rem;
+    margin-left: 20px;
 }
 .haven__navbar-links_container-sign{
-    position: fixed;
-    display: flex;
-    justify-content: flex-end ;
     align-items: center;
-    right: 3%;
     cursor: pointer;
 }
 .haven__navbar-links_container p,
@@ -45,7 +37,7 @@
     text-transform: capitalize;
     margin: 1 2rem;
 }
-.haven__navbar-links_container a,
+.haven__navbar-links_container-sign a,
 .haven__navbar-menu_container a{
     color: var(--White, #D9D9D9);
     font-family: var(--font-family);

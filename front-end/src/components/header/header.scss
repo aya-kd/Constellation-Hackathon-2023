@@ -7,20 +7,22 @@
 .overlay{
     position: absolute;
 }
-.haven__header img{
-    width: 105.5%; 
+.image{
+    width: 109%; 
+    margin-top: 5.2rem;
+    margin-left: 170px;
 }
 
 
-.haven__header-content{
+.haven__header-content {
     
     display: flex;
     justify-content: center;
     align-items:center;
     flex-direction: column;
     margin-right: 5rem;
-    padding-top: 200px ;
-    padding-left: 250px;
+    padding-top: 400px ;
+    padding-left: 450px;
 }
 .haven__header-content h1{
     font-family: var(--font-family);

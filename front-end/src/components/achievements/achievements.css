@@ -30,16 +30,16 @@
     line-height: normal;
 }
 .haven__achievements-images-content1-text1{
-    top: 2110px;
-    left: 285px;
+    top: 2200px;
+    left: 360px;
 }
 .haven__achievements-images-content1-text2{
-    top: 2110px;
-    left: 615px;
+    top: 2200px;
+    left: 685px;
 }
 .haven__achievements-images-content1-text3{
-    top: 2110px;
-    left: 965px;
+    top: 2200px;
+    left: 1035px;
 }
 .haven__achievements-images-content1-title{
     display: flex;  
@@ -51,6 +51,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    margin-left: 5rem;
 }
 .haven__achievements-images-content1-title-title1{
     margin-left: 120px;

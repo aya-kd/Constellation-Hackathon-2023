@@ -1,5 +1,4 @@
 .haven__informations{
-    background: var(--Lighter-Blue, #1A2130);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
@@ -7,6 +6,8 @@
     max-width: 1400px;
     margin-top: 50px;
     height: 350px;
+    background: var(--Dark-Blue, #091020);
+
 }
 .haven__informations h4{
     

@@ -29,32 +29,29 @@ const Navbar = () => {
   return (
     
       <div className="haven__navbar">
-            <div className="haven__navbar-links">
-                <div className="haven__navbar-links_logo">
-                  <img src={haven} alt="haven" />
-                </div>
-                <div className="haven__navbar-links_container">
-                  <p >Haven</p>
-                  <div className="haven__navbar-links_container-sign">
-                    <a><Link to="/Home" >Properties</Link></a>
-                    <button type="button" onClick={requestAccount}>Connect</button>
-                  </div>
-                  <div className="haven__navbar-menu">
-                    {toggleMenu
-                      ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
-                      : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />}
-                    {toggleMenu && (
-                        <div className="haven__navbar-menu_container scale-up-center">
-                          <div className="haven__navbar-menu_container-sign">
-                            <a><Link to="/Home" >Properties</Link></a>
-                            <button type="button" onClick={requestAccount} >Connect</button>
-                          </div>                          
-                        </div>
-                    )}
-                  </div>
-                </div>
+            <div className="haven__navbar-logo">
+              <img src={haven} alt="haven" />
+              <p >Haven</p>
             </div>
-          </div>
+            <div className="haven__navbar-links_container-sign">
+              <a><Link to="/Home" >Properties</Link></a>
+              <button type="button" onClick={requestAccount}>Connect</button>
+            </div>
+            <div className="haven__navbar-menu">
+                {toggleMenu
+                ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
+                : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />}
+                {toggleMenu && (
+                <div className="haven__navbar-menu_container scale-up-center">
+                    <div className="haven__navbar-menu_container-sign">
+                      <a><Link to="/Home" >Properties</Link></a>
+                      <button type="button" onClick={requestAccount} >Connect</button>
+                    </div>                          
+                </div> 
+                    )}
+            </div>
+      </div>
+            
    
     
   )

@@ -10,8 +10,8 @@
    }
    
    .haven__brand-SupportRefugees-text h3{
-    left: 210px;
-    top: 1000px;
+    left: 270px;
+    top: 1130px;
     position: absolute;
     text-align: right;
     margin-right: 10px;
@@ -26,8 +26,8 @@
    .haven__brand-SupportRefugees-text p{
     width: 400px;
     position: absolute;
-    left: 90px;
-    top: 1050px;
+    left: 150px;
+    top: 1180px;
     color: var(--White, #D9D9D9);
     text-align: right;
     font-family: Inter;
@@ -40,8 +40,8 @@
     justify-content: center;
    }
    .haven__brand-Transparency-text h3{
-    left: 820px;
-    top: 1210px;
+    left: 930px;
+    top: 1310px;
     position: absolute;
     margin-right: 10px;
     color: var(--White, #D9D9D9);
@@ -55,8 +55,8 @@
    .haven__brand-Transparency-text p{
     width: 400px;
     position: absolute;
-    left: 780px;
-    top: 1270px;
+    left: 930px;
+    top: 1355px;
     color: var(--White, #D9D9D9);
     text-align: left;
     font-family: Inter;
@@ -66,8 +66,8 @@
     line-height: normal;
    }
    .haven__brand-Payments-text h3{
-    left: 100px;
-    top: 1460px;
+    left: 150px;
+    top: 1540px;
     position: absolute;
     margin-right: 10px;
     color: var(--White, #D9D9D9);
@@ -81,8 +81,8 @@
    .haven__brand-Payments-text p{
     width: 430px;
     position: absolute;
-    left: 60px;
-    top: 1500px;
+    left: 110px;
+    top: 1590px;
     color: var(--White, #D9D9D9);
     text-align: right;
     font-family: Inter;

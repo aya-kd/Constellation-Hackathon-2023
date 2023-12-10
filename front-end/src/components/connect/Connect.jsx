@@ -30,6 +30,27 @@ const Connect = () => {
   const handleDonateClick = () => {
     console.log('Donation button clicked!');
   };
+  const [walletAddress, setWalletAddress] = useState("");
+
+  async function requestAccount(){
+  console.log('Requesting account....');
+  
+  if(window.ethereum) {
+    console.log('detected.');
+
+    try{
+      const accounts = await window.ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      console.log(accounts);
+    } catch (error){
+      console.log('error connecting ...');
+    }
+
+  } else{
+    console.log('metamask not detected.');
+  }
+}
   return (
     <div className="haven__connect">
         <div className="haven__connect-title">
@@ -40,7 +61,7 @@ const Connect = () => {
             <img src={Group1953} alt="Group1953" />
             <h3>Donor</h3>
             <p>Pay refugees’ rental expenses by donating now.</p>
-            <button  type="button" onClick={handleDonateClick}>Donate</button>
+            <button  type="button" onClick={requestAccount}>Donate</button>
           </div>
           <div className="haven__connect-people-refugee"> 
             <img src={Group1945} alt="Group1945" />
