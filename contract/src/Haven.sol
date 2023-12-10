@@ -25,6 +25,9 @@ contract Haven is AutomationCompatible{
     struct Account {
         string firstName;
         string lastName;
+        string addressLine;
+        string email;
+        string phoneNumber;
         address account;
         bool isRefugee;
     }
@@ -32,6 +35,11 @@ contract Haven is AutomationCompatible{
 
     struct Property {
         uint id;
+        string country;
+        string city;
+        string addressLine;
+        string propertyType;
+        uint rooms;
         uint price;
         uint months;
         PropertyStatus status;
@@ -79,8 +87,15 @@ contract Haven is AutomationCompatible{
 
     //----------------------------------------Functions-----------------------------------------//
 
-    function createAccount(string memory _firstName, string memory _lastName, bool _isRefugee) public {
-        Account memory account = Account(_firstName, _lastName, msg.sender, _isRefugee);
+    function createAccount(string memory _firstName, string memory _lastName, string memory _addressLine, string memory email, string memory _phoneNumber, bool _isRefugee) public {
+        Account memory account = Account({
+            firstName: _firstName, 
+            lastName: _lastName, 
+            addressLine: _addressLine,
+            email: email, 
+            phoneNumber: _phoneNumber,
+            account: msg.sender, 
+            isRefugee: _isRefugee});
 
         // add refugee to s_accounts mapping
         s_accounts[msg.sender] = account;
@@ -95,9 +110,14 @@ contract Haven is AutomationCompatible{
     }
 
 
-    function listProperty(uint _price, uint _months) public onlyPropertyOwner{
+    function listProperty(string memory _country, string memory _city, string memory _addressLine, string memory _propertyType, uint _rooms, uint _price, uint _months) public onlyPropertyOwner{
         Property memory property = Property({
             id: s_propertyId,
+            country: _country,
+            city: _city,
+            addressLine: _addressLine,
+            propertyType: _propertyType,
+            rooms: _rooms,
             price: _price,
             months: _months,
             status: PropertyStatus.Available,
