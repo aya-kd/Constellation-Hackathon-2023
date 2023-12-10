@@ -17,6 +17,7 @@ contract Haven is AutomationCompatible{
     //------------------------------------Mappings & enums------------------------------------//
     mapping(uint => Property) public s_properties;
     mapping(address => Account) public s_accounts;
+    mapping(address => uint) public s_donations;
 
     enum PropertyStatus {Available, Requested, Occupied}
 
@@ -54,11 +55,11 @@ contract Haven is AutomationCompatible{
     }
 
     //-----------------------------------------Events------------------------------------------//
-    event AccountCreated(Account account);
-    event PropertyListed(Property property);
-    event PropertyStatusChanged(PropertyStatus status);
-    event DonationReceived(address donor, uint amount);
-    event RentTimeEnded(string message);
+    event AccountCreated(address indexed account);
+    event PropertyListed(Property indexed property);
+    event PropertyStatusChanged(PropertyStatus indexed status);
+    event DonationReceived(address indexed donor, uint indexed amount);
+    event RentTimeEnded(string indexed message);
 
     //----------------------------------------Modifiers----------------------------------------//
 
@@ -101,7 +102,7 @@ contract Haven is AutomationCompatible{
         s_accounts[msg.sender] = account;
 
         //event: AccountCreated
-        emit AccountCreated(account);
+        emit AccountCreated(msg.sender);
 
     }
 
@@ -182,6 +183,9 @@ contract Haven is AutomationCompatible{
         (bool paymentSuccessful, ) = payable(property.owner).call{value: price}("");
         require(paymentSuccessful, "Paying owner failed");
 
+        //add donation to s_donations mapping
+        s_donations[msg.sender] += price;
+
         //set property status to occupied
         property.status = PropertyStatus.Occupied;
 
@@ -194,8 +198,12 @@ contract Haven is AutomationCompatible{
         //event: PropertyOccupied
         emit PropertyStatusChanged(property.status);
 
-        
     }
+
+    function getDonations(address _address) public view returns(uint) {
+        return s_donations[_address];
+    }
+    
 
     function endRent(uint ID) public propertyIsRequested(ID) {
         Property storage property = s_properties[ID];
